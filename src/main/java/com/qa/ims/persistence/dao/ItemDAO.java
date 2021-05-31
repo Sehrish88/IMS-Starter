@@ -69,7 +69,7 @@ public class ItemDAO implements Dao<Item>{
 				PreparedStatement statement = connection
 						.prepareStatement("INSERT INTO items(name, cost) VALUES (?, ?)");) {
 			statement.setString(1, item.getName());
-			statement.setString(2, item.getCost());
+			statement.setDouble(2, item.getCost());
 			statement.executeUpdate();
 			return readLatest();
 		} catch (Exception e) {
@@ -102,7 +102,7 @@ public class ItemDAO implements Dao<Item>{
 				PreparedStatement statement = connection
 						.prepareStatement("UPDATE items SET name = ?, cost = ? WHERE id = ?");) {
 			statement.setString(1, item.getName());
-			statement.setString(2, item.setCost());
+			statement.setDouble(2, item.getCost());
 			statement.setLong(3, item.getId());
 			statement.executeUpdate();
 			return read(item.getId());
