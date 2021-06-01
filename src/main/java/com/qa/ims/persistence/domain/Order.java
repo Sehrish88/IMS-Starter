@@ -1,7 +1,7 @@
 package com.qa.ims.persistence.domain;
 
-import java.util.ArrayList;
-import java.util.List;
+
+
 
 public class Order {
 private Long id;
@@ -15,6 +15,16 @@ public Order(Long id, Long customer_id) {
 	this.customer_id = customer_id;
 	
 }
+
+
+
+
+public Order(Long customer_id) {
+	super();
+	this.customer_id = customer_id;
+}
+
+
 
 
 public Long getId() {
@@ -48,14 +58,23 @@ public void setCustomer_id(Long customer_id) {
 
 
 @Override
+public String toString() {
+	return "Order [id=" + id + ", customer_id=" + customer_id +  "]";
+}
+
+
+
+
+@Override
 public int hashCode() {
 	final int prime = 31;
 	int result = 1;
 	result = prime * result + ((customer_id == null) ? 0 : customer_id.hashCode());
 	result = prime * result + ((id == null) ? 0 : id.hashCode());
-	result = prime * result + ((itemList == null) ? 0 : itemList.hashCode());
 	return result;
 }
+
+
 
 
 @Override
@@ -77,18 +96,7 @@ public boolean equals(Object obj) {
 			return false;
 	} else if (!id.equals(other.id))
 		return false;
-	if (itemList == null) {
-		if (other.itemList != null)
-			return false;
-	} else if (!itemList.equals(other.itemList))
-		return false;
 	return true;
-}
-
-
-@Override
-public String toString() {
-	return "Order [id=" + id + ", customer_id=" + customer_id +  "]";
 } 
 
 
