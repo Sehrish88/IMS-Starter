@@ -6,14 +6,14 @@ import java.util.List;
 public class Order {
 private Long id;
 private Long customer_id;
-private List<Item> itemList = new ArrayList<>();
+//private static  List<Item> itemList = new ArrayList<>();
 
 
-public Order(Long id, Long customer_id, List<Item> itemList) {
+public Order(Long id, Long customer_id) {
 	super();
 	this.id = id;
 	this.customer_id = customer_id;
-	this.itemList = itemList;
+	
 }
 
 
@@ -37,14 +37,14 @@ public void setCustomer_id(Long customer_id) {
 }
 
 
-public List<Item> getItemList() {
-	return itemList;
-}
+//public List<Item> getItemList() {
+//	return itemList;
+//}
 
 
-public void setItemList(List<Item> itemList) {
-	this.itemList = itemList;
-}
+//public void setItemList(List<Item> itemList) {
+//	this.itemList = itemList;
+//}
 
 
 @Override
@@ -88,7 +88,7 @@ public boolean equals(Object obj) {
 
 @Override
 public String toString() {
-	return "Order [id=" + id + ", customer_id=" + customer_id + ", itemList=" + itemList + "]";
+	return "Order [id=" + id + ", customer_id=" + customer_id +  "]";
 } 
 
 
