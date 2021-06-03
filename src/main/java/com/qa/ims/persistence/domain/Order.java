@@ -47,19 +47,18 @@ public void setCustomer_id(Long customer_id) {
 }
 
 
-//public List<Item> getItemList() {
-//	return itemList;
-//}
 
 
-//public void setItemList(List<Item> itemList) {
-//	this.itemList = itemList;
-//}
+
+
+
+
+
 
 
 @Override
 public String toString() {
-	return "Order [id=" + id + ", customer_id=" + customer_id +  "]";
+	return "Order [id=" + id + ", customer_id=" + customer_id + "]";
 }
 
 
