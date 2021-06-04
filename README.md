@@ -1,5 +1,5 @@
 Coverage: 34%
-# Project Title
+# Inventory Management System
 
 One Paragraph of project description goes here
 
@@ -12,53 +12,39 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 
 ```
-Give examples
+Java 8 or later
+Maven 
+JUnit dependencies
+Mockito dependencies 
+Eclipse or IntelliJ IDE
+MYSQL
 ```
 
 ### Installing
 
 A step by step series of examples that tell you how to get a development env running
 
-Say what the step will be
+
 
 ```
-Give the example
+1. Clone the Main branch or Dev branch of this repository
+2. After cloning this repo, open it up in your IDE
+3. Go to `src/main/java/com/qa/ims/utils/DBUtils.java` you will need to modify the 'connect()' method with your own databse information
+4. Run the 'Runner,java' class and the application should start and connect to your database 
 ```
 
-And repeat
 
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
-Explain how to run the automated tests for this system. Break down into which tests and what they do
+Tests are in the 'src/test' directory
 
 ### Unit Tests 
+Add the Mockito dependencies in your pom file 
+If you are using Eclipse, you will be able to run these tests by right-clicking the classes and selecting the "Run as JUnit test" option.
 
-Explain what these tests test, why and how to run them
 
-```
-Give an example
-```
 
-### Integration Tests 
-Explain what these tests test, why and how to run them
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
 
 ## Deployment
 
@@ -84,6 +70,5 @@ This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Thanks to the QA instructors and especially Alex who helped me a lot with this project
+
